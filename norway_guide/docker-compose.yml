@@ -1,11 +1,12 @@
 services:
-  norway_guide:
-    build:
-      context: .
+  app:
+    build: .
     container_name: norway_guide
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
     ports:
       - "8501:8501"
-    environment:
-      - OPENAI_API_KEY   # Read from host environment at runtime
     volumes:
-      - .:/app           # Mount app folder for persistence (monitor.db, edits)
+      - .:/app
+    working_dir: /app
+    command: streamlit run app.py --server.port=8501 --server.address=0.0.0.0
