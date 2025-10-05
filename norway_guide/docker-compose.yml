@@ -1,0 +1,11 @@
+services:
+  norway_guide:
+    build:
+      context: .
+    container_name: norway_guide
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY   # Read from host environment at runtime
+    volumes:
+      - .:/app           # Mount app folder for persistence (monitor.db, edits)
