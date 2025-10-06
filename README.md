@@ -66,5 +66,14 @@ def llm(prompt, model = 'gpt_5-mini'):
 ```
 
 ## Interface
+Streamlit application is created for users to submit their questions about tourist attractions in Norway, get answers and submit feedback.
+All details about the app can be found in the folder 'norway_guide'. The app is scripted in the file `app.py`.
 
+## Ingestion pipeline
+There is an automated ingestion of the dataset `data.csv` into the knowledge base, it's done by the Python script `rag.py` when users starts the Streamlit app.
 
+## Monitoring
+The user feedback is collected and there's a dashboard with 5 charts.
+When a user starts the application `monitor.db` database and `monitor` table are initiated using SQLite. This table is used to store information such as: timestamp, query, prompt, answer, feedback, response_time, input_tokens, output_tokens.
+The Streamlit app has an Admin page, where an admin can see the performance / feedback metrics from that `monitor` tabel
+All details about the app can be found in the folder 'norway_guide'. The app is scripted in the file `app.py`.
