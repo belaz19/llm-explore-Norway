@@ -8,3 +8,11 @@ When you are going on vacations to Norway (or any other country), you should get
 
 ## Retrieval flow
 All my scipts used for discovering the best RAG flow and its components are stored in the folder `notebooks`.
+The RAG flow used here is:
+```
+def rag(query):
+    search_results = search(query) # a search function that search over the Knowledge base and choose the most relevant records based on the user's query
+    prompt = build_prompt(query, search_results) # a prompt build function that builds an LLM-suitable prompt based on the users's query and search results
+    answer = llm(prompt) # a function sending the prompt to llm and recieving an answer from llm
+    return answer # the RAG flow returns that LLM answer to the user
+```
