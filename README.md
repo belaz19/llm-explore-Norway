@@ -45,3 +45,26 @@ def search(query):
 
     return results
 ```
+
+## LLM evaluation
+The notebook `eval_llm.ipynb` is used to evaluate LLMs. Multiple approaches are evaluated, and the best one is used.
+100 random questions are chosen from `ground-truth-data.csv`, then answered by LLMs and then evaluated by LLM whether they are relevant or not.
+
+The evaluated LLMs:
+1. answered by gpt-5-mini (and then evaluated by gpt-5-mini): RELEVANT 83, PARTLY_RELEVANT 15, NON_RELEVANT 2
+2. answered by gpt-5-nano (and then evaluated by gpt-5-mini): RELEVANT 82, PARTLY_RELEVANT 15, NON_RELEVANT 3
+
+Thus, the LLM model gpt-5-mini is selected going forward:
+```
+def llm(prompt, model = 'gpt_5-mini'):
+    response = client.chat.completions.create(
+        model = model,
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    return response.choices[0].message.content
+```
+
+## Interface
+
+
