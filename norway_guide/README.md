@@ -32,4 +32,9 @@ docker compose down
 ```
 
 ## How to use the app
-![User page](https://github.com/belaz19/llm-explore-Norway/blob/main/norway_guide/Admin_page.jpg)
+Go to the User page, type your question into the box, click on "Get Answer", read the answer, provide a feedback if you like.
+![User page](https://github.com/belaz19/llm-explore-Norway/blob/main/norway_guide/User_page.jpg)
+
+## How to see performance metrics
+Go to the Admin page, and see the metrics: Last 5 records, Feedback Distribution, Average Token Usage (Input & Output), Average Response Time, Queries in the Last Hour.
+![Admin page](https://github.com/belaz19/llm-explore-Norway/blob/main/norway_guide/Admin_page.jpg)
