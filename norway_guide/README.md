@@ -38,3 +38,8 @@ Go to the User page, type your question into the box, click on "Get Answer", rea
 ## How to see performance metrics
 Go to the Admin page and see the metrics: Last 5 records, Feedback Distribution, Average Token Usage (Input & Output), Average Response Time, Queries in the Last Hour.
 ![Admin page](https://github.com/belaz19/llm-explore-Norway/blob/main/norway_guide/Admin_page.jpg)
+
+## How the app is built:
+`rag.py` - Load data from .csv and initialize index, setup OpenAI client, def search, def build_prompt, def llm, def rag
+`db.py` - Connect to database or create one if doesn't exist, export connection and cursor
+`app.py` - Defines the User page (for submitting questions, calling `rag.py`, returning answer, recording transactions in DB) and Admin page (monitoring performance and feedbacks through various charts)

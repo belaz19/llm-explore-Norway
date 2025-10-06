@@ -98,5 +98,5 @@ import os
 from dotenv import load_dotenv
 from tqdm.auto import tqdm
 ```
-You also need to create an `.env` file in the `llm-explore-Norway` directory and place your OpenAI API key in there:
+You also need to create an `.env` file in the `llm-explore-Norway` directory and past your OpenAI API key into that file:
 `OPENAI_API_KEY="insert_your_key_here"` . This API key will be used by the notebooks for creating an OpenAI Client.
