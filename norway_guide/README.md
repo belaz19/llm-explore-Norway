@@ -5,5 +5,7 @@ If you are planning your vacations in Norway, this is an app for you. You
 
 ## How to run the app on Linux
 1. Open `Terminal`and run
-```git clone https://github.com/belaz19/llm-explore-Norway.git
-cd llm-explore-Norway/norway_guide```
+```
+git clone https://github.com/belaz19/llm-explore-Norway.git
+cd llm-explore-Norway/norway_guide
+```
