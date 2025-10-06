@@ -21,7 +21,7 @@ docker compose build
 docker compose up
 ```
 
-4. Forward port 8501 (if not dine automatically) and open it it broswer:
+4. Forward port 8501 (if not done automatically) and open it it broswer:
 ```
 http://localhost:8501/
 ```
@@ -30,3 +30,5 @@ http://localhost:8501/
 ```
 docker compose down
 ```
+
+## How to use the app
