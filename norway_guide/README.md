@@ -1,5 +1,5 @@
 # Norway Tourist Guide
-This is the "Norway Tourist Guide" app.It has a knowledge base of 150 most popular attractions in Norway of different kind: sightseeing, hiking, cruise, etc.
+This is the "Norway Tourist Guide" app. It has the knowledge base of 150 most popular attractions in Norway of different kind: sightseeing, hiking, cruise, etc.
 It provides you a user interface where you can ask a question related to tourist attractions in Norway and get an answer.
 If you are planning your vacations in Norway, this is an app for you. You
 
@@ -36,5 +36,5 @@ Go to the User page, type your question into the box, click on "Get Answer", rea
 ![User page](https://github.com/belaz19/llm-explore-Norway/blob/main/norway_guide/User_page.jpg)
 
 ## How to see performance metrics
-Go to the Admin page, and see the metrics: Last 5 records, Feedback Distribution, Average Token Usage (Input & Output), Average Response Time, Queries in the Last Hour.
+Go to the Admin page and see the metrics: Last 5 records, Feedback Distribution, Average Token Usage (Input & Output), Average Response Time, Queries in the Last Hour.
 ![Admin page](https://github.com/belaz19/llm-explore-Norway/blob/main/norway_guide/Admin_page.jpg)
