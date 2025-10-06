@@ -75,7 +75,7 @@ There is an automated ingestion of the dataset `data.csv` into the knowledge bas
 
 ## Monitoring
 The user feedback is collected and there's a dashboard with 5 charts.
-When a user starts the application `monitor.db` database and `monitor` table are initiated using SQLite by the `dp.py` script. This table is used to store information such as: timestamp, query, prompt, answer, feedback, response_time, input_tokens, output_tokens.
+When a user starts the application `monitor.db` database and `monitor` table are initiated using SQLite by the `db.py` script. This table is used to store information such as: timestamp, query, prompt, answer, feedback, response_time, input_tokens, output_tokens.
 The Streamlit app has an Admin page, where an admin can see the performance / feedback metrics from that `monitor` tabel.
 
 All details about the app can be found in the folder `norway_guide`. The app is scripted in the file `app.py`.
@@ -85,5 +85,18 @@ Everything is in docker-compose. `Dockerfile` and `docker-compose.yml` are provi
 
 All docker related details can be found in the folder `norway_guide`.
 
-##
-
+## Reproducibility
+Instructions how to run and use the app are provided in the folder `norway_guide`
+All datasets are accessible in the folder `data`
+For running my Jupyter notebooks used for RAG creation and evaluations, I have the following packages installed in my Python environment 3.12.1:
+```
+import pandas as pd
+import minsearch
+import openai
+from openai import OpenAI
+import os
+from dotenv import load_dotenv
+from tqdm.auto import tqdm
+```
+You also need to create an .env file in the `llm-explore-Norway` repo and place your OpenAI API key in there:
+`OPENAI_API_KEY="insert_your_key_here"` . This is the API key used by the notebooks.
