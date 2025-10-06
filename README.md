@@ -8,7 +8,7 @@ When you are going on vacations to Norway (or any other country), you should get
 
 ## Retrieval flow
 All my scipts used for discovering the best RAG flow and its components are stored in the folder `notebooks`.
-my RAG flow is:
+my RAG flow is created in the `make_rag.ipynb` notebook:
 ```
 def rag(query):
     search_results = search(query) # a search function that search over the Knowledge base and choose the most relevant records based on the user's query
