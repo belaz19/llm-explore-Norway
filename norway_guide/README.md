@@ -4,8 +4,29 @@ It provides you a user interface where you can ask a question related to tourist
 If you are planning your vacations in Norway, this is an app for you. You
 
 ## How to run the app on Linux
-1. Open `Terminal`and run
+1. Open Terminal and run:
 ```
 git clone https://github.com/belaz19/llm-explore-Norway.git
 cd llm-explore-Norway/norway_guide
+```
+
+2. Get an OpenAI API key here `https://platform.openai.com/settings/organization/api-keys` and run in Terminal:
+```
+export OPENAI_API_KEY="insert_your_key_here"
+```
+
+3. Run docker:
+```
+docker compose build
+docker compose up
+```
+
+4. Forward port 8501 (if not dine automatically) and open it it broswer:
+```
+http://localhost:8501/
+```
+
+5. When stopped using the app, press `Ctrl + C` in Terminal and run this:
+```
+docker compose down
 ```
