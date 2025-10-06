@@ -1,5 +1,5 @@
 # Norway Tourist Guide
-
+![Fjord](https://github.com/belaz19/llm-explore-Norway/blob/main/fjord.jpg)
 ## Problem description
 When you are going on vacations to Norway (or any other country), you should get familiar with what this country has to offer. What are the most popular tourist attractions, where are they located, what is the best time of year to visit them. The goal of this project is to:
 1. Create a knowledge base of most popular attractions in Norway
