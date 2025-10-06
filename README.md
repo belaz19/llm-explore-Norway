@@ -7,7 +7,7 @@ When you are going on vacations to Norway (or any other country), you should get
 3. Create an application with an User Interface, where users can ask questions about tourist attractions in Norway and get answers that help them planning vacations and not missing out important tourist attractions
 
 ## Retrieval flow
-All my scipts used for discovering the best RAG flow and its components are stored in the folder `notebooks`.
+Both a knowledge base and an LLM are used in the flow. All my scipts used for discovering the best RAG flow and its components are stored in the folder `notebooks`.
 My RAG flow is created in the `make_rag.ipynb` notebook:
 ```
 def rag(query):
@@ -18,10 +18,10 @@ def rag(query):
 ```
 
 ## Retrieval evaluation
-First the `ground-truth-data.csv` is generated using the `make_truth.ipynb` notebook. This .csv document contains 5 questions to each record in the knowledge base. The retrieval evaluation is done using the 'eval_retrieval.ipynb' notebook.
+First, the `ground-truth-data.csv` is generated using the `make_truth.ipynb` notebook. This .csv file contains 5 questions to each record from the knowledge base. The retrieval evaluation is done using the 'eval_retrieval.ipynb' notebook.
 
 Multiple retrieval approaches are evaluated, and the best one is used.
-The evaluated retrieval approahces:
+The evaluated retrieval approahces are:
 1. minsearch without boosting: hit rate 98%, mrr 94%
 2. minsearch with boosting: hit rate 99%, mrr 97%
 
@@ -47,10 +47,10 @@ def search(query):
 ```
 
 ## LLM evaluation
-The notebook `eval_llm.ipynb` is used to evaluate LLMs. Multiple approaches are evaluated, and the best one is used.
-100 random questions are chosen from `ground-truth-data.csv`, then answered by LLMs and then evaluated by LLM whether they are relevant or not.
+The notebook `eval_llm.ipynb` is used to evaluate LLMs for our case. Multiple approaches are evaluated, and the best one is used.
+100 random questions are chosen from `ground-truth-data.csv`, then answered by LLMs and then evaluated by LLM whether the answers are relevant or not.
 
-The evaluated LLMs:
+The evaluated LLMs are:
 1. answered by gpt-5-mini (and then evaluated by gpt-5-mini): RELEVANT 83, PARTLY_RELEVANT 15, NON_RELEVANT 2
 2. answered by gpt-5-nano (and then evaluated by gpt-5-mini): RELEVANT 82, PARTLY_RELEVANT 15, NON_RELEVANT 3
 
@@ -66,7 +66,7 @@ def llm(prompt, model = 'gpt_5-mini'):
 ```
 
 ## Interface
-Streamlit application is created for users to submit their questions about tourist attractions in Norway, get answers and submit feedback.
+Streamlit application is created for users to write their questions about tourist attractions in Norway, get answers and give feedback if wanted.
 
 All details about the app and how to run that app - this info can be found in the folder `norway_guide`. The app is scripted in the file `app.py`.
 
@@ -75,7 +75,7 @@ There is an automated ingestion of the dataset `data.csv` into the knowledge bas
 
 ## Monitoring
 The user feedback is collected and there's a dashboard with 5 charts.
-When a user starts the application `monitor.db` database and `monitor` table are initiated in SQLite using the `dp.py` script. This table is used to store information such as: timestamp, query, prompt, answer, feedback, response_time, input_tokens, output_tokens.
+When a user starts the application `monitor.db` database and `monitor` table are initiated using SQLite by the `dp.py` script. This table is used to store information such as: timestamp, query, prompt, answer, feedback, response_time, input_tokens, output_tokens.
 The Streamlit app has an Admin page, where an admin can see the performance / feedback metrics from that `monitor` tabel.
 
 All details about the app can be found in the folder `norway_guide`. The app is scripted in the file `app.py`.
@@ -84,4 +84,6 @@ All details about the app can be found in the folder `norway_guide`. The app is 
 Everything is in docker-compose. `Dockerfile` and `docker-compose.yml` are provided for the main application and dependencies.
 
 All docker related details can be found in the folder `norway_guide`.
+
+##
 
