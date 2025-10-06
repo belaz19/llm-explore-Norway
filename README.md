@@ -87,8 +87,8 @@ All docker related details can be found in the folder `norway_guide`.
 
 ## Reproducibility
 Instructions how to run and use the app are provided in the folder `norway_guide`
-All datasets are accessible in the folder `data`
-For running my Jupyter notebooks used for RAG creation and evaluations, I have the following packages installed in my Python environment 3.12.1:
+All datasets are accessible in the folder `data`.
+The Jupyter notebooks used in building this project are stored in the folder `notebooks`. If you want to run them, you need the following packages installed in your Python environment 3.12.1:
 ```
 import pandas as pd
 import minsearch
@@ -98,5 +98,5 @@ import os
 from dotenv import load_dotenv
 from tqdm.auto import tqdm
 ```
-You also need to create an .env file in the `llm-explore-Norway` repo and place your OpenAI API key in there:
-`OPENAI_API_KEY="insert_your_key_here"` . This is the API key used by the notebooks.
+You also need to create an `.env` file in the `llm-explore-Norway` directory and place your OpenAI API key in there:
+`OPENAI_API_KEY="insert_your_key_here"` . This API key will be used by the notebooks for creating an OpenAI Client.
