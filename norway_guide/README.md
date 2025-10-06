@@ -32,3 +32,4 @@ docker compose down
 ```
 
 ## How to use the app
+(https://github.com/belaz19/llm-explore-Norway/blob/main/norway_guide/Admin_page.jpg)
